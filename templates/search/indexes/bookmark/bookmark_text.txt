@@ -1,0 +1,5 @@
+# 指定根据表中的哪些字段建立索引
+{{ object.website_title }}
+{{ object.desc }}
+# 根据商品的详情建立索引
+{{ object.folder.folder_name }}

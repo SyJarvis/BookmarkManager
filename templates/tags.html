@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block body %}
+    <div class="wp">
+		<div class="left z">
+        {% if list %}
+            {% for li in list %}
+			<div class="tag z">
+				<form method="post" action="/tag/edit">
+				<input type="text" name="tag_name" value="{{ li.name }}" class="z">
+                    <input type="hidden" name="tag_id" value="{{ li.id }}">
+				</form>
+				<div class="shanchu y">
+					<a href="javascript:void(0);" class="remove" data="{{li.id}}"><img src="{% static 'images/shanchu.png' %}" style="width: 15px; height: 15px;"></a>
+				</div>
+			</div>
+            {% endfor %}
+        {% else %}
+            <div class="tag z">暂无标签</div>
+        {% endif %}
+		</div>
+		<div class="right z">
+			<form action="/tag/add" method="post">
+				<label>标签名</label>
+				<input type="text" name="tag_name" value="">
+				<input type="submit" name="" class="sub" value="保存">
+			</form>
+		</div>
+	</div>
+{% endblock body %}
+
+{% block bottomfiles %}
+    <script type="text/javascript" charset="utf-8" src="{% static 'plugins/jquery-2.1.1.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'js/common.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'plugins/layer/layer.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'js/tag.js' %}"></script>
+{% endblock bottomfiles %}

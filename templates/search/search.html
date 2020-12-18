@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block body %}
+    <div class="wp">
+	<div class="line_b"></div>
+	<article>
+		<section class="msg">
+            {% if page %}
+                {% for item in page %}
+			<div class="msg_d z">
+				<div class="website">
+					<a href="{{ item.object.url }}" target="_blank"><div class="site">{{ item.object.website_title }}</div></a>
+				</div>
+				<div class="biaoqian">
+					<div class="a z">#</div>
+                    {% for tag in li.tags.all %}
+					<div class="b z"><a href="/search?q={{ tag.name }}">{{ tag.name }}</a></div>
+                    {% endfor %}
+				</div>
+				<div class="op">
+					<div class="op_edit z"><a href="/bookmark/edit?bm_id={{ item.object.id }}{% if item.object.id %}&folder_id={{ item.object.folder.id }}{% else %}{% endif %}"><img src="{% static 'images/edit.png' %}" alt=""></a></div>
+					<div class="op_shanchu z"><a href="javascript:void(0);" class="remove" data="{{item.object.id}}"><img src="{% static 'images/shanchu.png' %}"></a></div>
+
+				</div>
+			</div>
+            {% endfor %}
+            {% else %}
+                <div class="msg_d z">暂无数据</div>
+            {% endif %}
+
+
+		</section>
+	</article>
+	</div>
+{% endblock body %}
+
+{% block bottomfiles %}
+    <script type="text/javascript" charset="utf-8" src="{% static 'plugins/jquery-2.1.1.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'js/common.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'plugins/layer/layer.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'js/list.js' %}"></script>
+{% endblock bottomfiles %}

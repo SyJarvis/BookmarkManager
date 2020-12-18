@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title>书签管理</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="StyleSheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="header_wrapper">
+	<header>
+		<div class="top">
+		</div>
+		<div class="wp">
+		<div class="container">
+			<div class="logo z">
+				<a href="/"><img src="{% static 'images/logo.png' %}" alt=""></a>
+			</div>
+			<table class="liebiao z">
+				<tr>
+					<td valign="bottom z"><a href="/"><div class="{% if sign == 'folder' %}active{% endif %}">分类</div></a></td>
+					<td valign="bottom z"><a href="/tag"><div class="{% if sign == 'tag' %}active{% endif %}">标签</div></a></td>
+					<td valign="bottom z"><a href="/bookmark"><div class="{% if sign == 'bookmark' %}active{% endif %}">书签</div></a></td>
+				</tr>
+			</table>
+			<div class="sousuo z">
+				<div class="sousuo_right z">
+					<form action="/search" method="get">
+						<input id="" type="text" name="q" placeholder="请输入你想要搜索的关键词" class="inp" value="{% if query %}{{ query }}{% endif %}">
+
+					</form>
+				</div>
+			</div>
+			<div class="button z">
+                <div class="button_add z">
+					<a href="/folder/add"><img src="{% static 'images/folder_add.png' %}"></a>
+				</div>
+				<div class="button_add z">
+					<a href="/bookmark/add"><img src="{% static 'images/add.png' %}"></a>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="line"></div>
+	</header>
+
+</div>
+
+<div class="body_wrapper">
+{% block body %}{% endblock body %}
+
+</div>
+
+<div class="footer_wrapper">{% block bottom %}{% endblock bottom %}</div>
+
+{% block bottomfiles %}{% endblock bottomfiles %}
+
+</body>
+</html>

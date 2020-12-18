@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block body %}
+    <div class="wp">
+		<div class="title">
+			编辑书签
+		</div>
+		<div class="req">
+			<form method="post" action="">
+                {% csrf_token %}
+				<ul>
+					<li>
+						<label>URL</label>
+						<input type="text" name="url" class="bm_input" value="" placeholder="">
+						<span></span>
+					</li>
+					<li>
+						<label>标题</label>
+						<input type="text" name="title" class="bm_input" value="" placeholder="">
+						<span></span>
+					</li>
+					<li>
+						<label>类别</label>
+						<input type="text" name="folder_name" class="bm_input" value="" placeholder="">
+                        <input type="hidden" name="folder_id" value="">
+						<span></span>
+					</li>
+					<li>
+						<label>标签</label>
+						<input type="text" name="tags" class="bm_input" value="" placeholder="">
+						<span>多个标签之间用(#)号分隔</span>
+					</li>
+					<li>
+						<label>备注</label>
+						<textarea class="bm_text" name="desc"></textarea>
+						<span></span>
+					</li>
+					<li class="sub_on z">
+						<input type="submit" name="" value="保存" placeholder="">
+						<span></span>
+					</li>
+					<li class="sub_off z">
+						<input type="button" name="url" value="退出" placeholder="" onclick="javascript:history.back(-1);">
+						<span></span>
+					</li>
+				</ul>
+
+			</form>
+		</div>
+	</div>
+{% endblock body %}

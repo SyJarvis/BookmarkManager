@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+    {% if list %}
+    {% for bf in list %}
+       <div class="list z">
+		<a href="/list?folder_id={{ bf.id }}"><div class="file_name">{{bf.folder_name}}</div></a>
+		<div class="content">
+			<p>备注：{% if  bf.desc %}{{ bf.desc }}{% else %}{% endif %}</p>
+		</div>
+		<div class="cage_op">
+			<a href="/folder/edit?cage={{ bf.id }}" class="z"><img src="{% static 'images/folder_details.png' %}"></a>
+			<a href="javascript:void(0);" class="remove y" data="{{bf.id}}"><img src="{% static 'images/folder_off.png' %}"></a>
+		</div>
+	</div>
+    {% endfor %}
+    {% else %}
+         <div class="list">暂无数据</div>
+    {% endif %}
+{% endblock body %}
+
+
+{% block bottomfiles %}
+    <script type="text/javascript" charset="utf-8" src="{% static 'plugins/jquery-2.1.1.js' %}"></script>
+<script type="text/javascript" charset="utf-8" src="{% static 'js/common.js' %}"></script>
+<script type="text/javascript" charset="utf-8" src="{% static 'plugins/layer/layer.js' %}"></script>
+<script type="text/javascript" charset="utf-8" src="{% static 'js/index.js' %}"></script>
+{% endblock bottomfiles %}

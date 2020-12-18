@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block body %}
+	<div class="wp">
+		<div class="hed">
+			<img src="{% static 'images/folder.png' %}">
+			<label>新增</label>
+		</div>
+		<div class="req">
+			<form method="post" action="/folder/edit">
+                {% csrf_token %}
+				<ul>
+					<li>
+						<label>名称</label>
+						<input type="text" name="folder_name" class="bm_input" value="{{ bf.folder_name }}" placeholder="">
+						<span class="errmsg">{{errmsg}}</span>
+					</li>
+					<li>
+						<label>备注</label>
+						<textarea class="bm_text" name="desc">{% if bf.desc %}{{ bf.desc }}{% else %}{% endif %}</textarea>
+						<span></span>
+                        <input type="hidden" name="folder_id" value="{{ bf.id }}">
+					</li>
+					<li class="sub_on z">
+						<input type="submit" name="" value="保存">
+						<span></span>
+					</li>
+					<li class="sub_off z">
+						<input type="submit" name="quit" value="退出">
+						<span></span>
+					</li>
+				</ul>
+				
+			</form>
+		</div>
+	</div>
+{% endblock body %}

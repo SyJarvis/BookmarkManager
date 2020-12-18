@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>书签项目</title>
+</head>
+<body>
+搜索的关键字:{{ query }}<br/>
+当前页的page对象:{{ page}}<br/>
+<ul>
+    {% for item in page %}
+    <li>{{ item.object }}</li>
+    {% endfor %}
+</ul>
+当前页的page对象:{{ page}}<br/>
+</body>
+</html>

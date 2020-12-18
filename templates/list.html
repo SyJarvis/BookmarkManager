@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block body %}
+    <div class="wp">
+	<article>
+		<section class="lianjie">
+			<div class="lianjie_img z"><img src="{% static 'images/lianjie.png' %}"></div>
+			<div class="lianjie_text z">{{ bf.folder_name }}</div>
+		</section>
+	</article>
+	<div class="line_b"></div>
+	<article>
+		<section class="msg">
+            {% if list %}
+                {% for li in list %}
+			<div class="msg_d z">
+				<div class="website">
+					<a href="{{ li.url }}" target="_blank"><div class="site">{{ li.website_title }}</div></a>
+				</div>
+				<div class="biaoqian">
+
+					<div class="a z"># </div>
+                    {% for tag in li.tags.all %}
+					<div class="b z"><a href="/search?q={{ tag.name }}">{{ tag.name }}</a></div>
+                    {% endfor %}
+				</div>
+				<div class="op">
+					<div class="op_edit z"><a href="/bookmark/edit?bm_id={{ li.id }}{% if bf.id %}&folder_id={{ bf.id }}{% else %}{% endif %}"><img src="{% static 'images/edit.png' %}" alt=""></a></div>
+					<div class="op_shanchu z"><a href="javascript:void(0);" class="remove" data="{{li.id}}"><img src="{% static 'images/shanchu.png' %}"></a></div>
+
+				</div>
+			</div>
+            {% endfor %}
+            {% else %}
+                <div class="msg_d z">暂无数据</div>
+            {% endif %}
+
+
+		</section>
+	</article>
+	</div>
+{% endblock body %}
+
+{% block bottomfiles %}
+    <script type="text/javascript" charset="utf-8" src="{% static 'plugins/jquery-2.1.1.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'js/common.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'plugins/layer/layer.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'js/list.js' %}"></script>
+{% endblock bottomfiles %}
