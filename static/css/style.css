@@ -1,0 +1,425 @@
+/*通用样式*/
+*{margin:0; padding:0;}
+body{font: 14px/24px 'Microsoft YaHei', '宋体', '"Helvetica Neue", Helvetica, Arial, sans-serif'}
+.wp{ width: 1366px; margin: 0 auto; }
+.z{float:left;}
+.y{float:right;}
+.cl{clear: both;}
+.mr_0{margin:0;}
+img{border: none;}
+
+.top{
+	width: 100%;
+	height: 23px;
+	background: #fff;
+}
+
+.logo a{
+	text-decoration: none;
+}
+
+.logo a img{
+	width: 48px;
+	height: 48px;
+}
+
+.header_wrapper{
+	width: 100%;
+	height: 88px;
+}
+
+.liebiao{
+	margin-left: 120px;
+}
+
+.liebiao a{
+	color: #8a8a8a;
+	text-decoration: none;
+	font-size: 24px;
+
+}
+.liebiao .active{
+	color: #ffcc66;
+}
+.liebiao td{
+	height: 48px;
+}
+
+.liebiao div{
+	margin-right: 20px;
+}
+
+
+
+
+.sousuo{
+	margin-left: 100px;
+	position: relative;
+	margin-right: 150px;
+}
+
+
+.sousuo img{
+	width: 35px;
+	height: 35px;
+}
+
+
+
+.sousuo .inp{
+	width: 380px;
+	height: 42px;
+	background: #eeeeee;
+	border:1px solid #7e7e7e;
+	border-radius: 10px;
+	outline: none;	/*去掉点击时外层边框*/
+	
+}
+
+.line_b{
+	height: 20px;
+	margin-top: 20px;
+}
+
+
+.button{
+	height: 48px;
+	padding-top: 10px;
+}
+
+.button img{
+	width: 25px;
+	height: 25px;
+}
+
+.button_add img{
+	width: 28px;
+	height: 28px;
+}
+
+.button a{
+	margin-right: 35px;
+}
+
+
+.line{
+	background: #eeeeee;
+	width: 100%;
+	height: 2px;
+	position: relative;
+	top: 55px;
+}
+
+.lianjie{
+	display: block;
+	height: 30px;
+}
+
+.lianjie img{
+	width: 52px;
+	height: 52px;
+}
+
+.lianjie_img{
+	margin-left: 80px;
+}
+.body_wrapper{
+	width: 100%;
+	height: 52px;
+	margin-top: 10px;
+}
+
+.lianjie_text{
+	margin-top: 10px;
+	margin-left: 5px;
+	font-size: 30px;
+	color: #8b8b8b;
+	line-height: 30px;
+}
+
+
+.biaoqian{
+	margin-top: 5px;
+	font-size: 15px;
+	line-height: 15px;
+	color: #7e7e7e;
+	height: 20px;
+	margin-bottom: 5px;
+}
+
+.biaoqian .b{
+	margin-right: 3px;
+}
+.biaoqian .b a{
+	text-decoration: none;
+	color: #7e7e7e;
+	font-size: 15px;
+}
+.body{
+	display: block;
+}
+
+
+.website{
+	height: 30px;
+	margin-bottom: 5px;
+	display: -webkit-box;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 380px;
+}
+
+.website a{
+	text-decoration: none;
+	font-size: 18px;
+	color: #1B1B1B;
+	width: 350px;
+	text-overflow: ellipsis;
+}
+
+.site{
+	width: 380px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.op{
+	height: 20px;
+}
+.op img{
+	width: 18px;
+	height: 18px;
+}
+.op .op_edit{
+	margin-right: 15px;
+}
+.msg{
+	width: 1200px; margin: 0 auto;
+}
+
+.msg_d{
+	width: 530px;
+	height: 105px;
+	margin-bottom: 20px;
+}
+
+/* index */
+.body_wrapper{
+	width: 1100px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.body_wrapper .list{
+	width: 212px;
+	height: 184px;
+	border: 1px solid #8a8a8a;
+	margin-right: 60px;
+	margin-bottom: 36px;
+}
+
+.body_wrapper .list a{
+	text-decoration: none;
+	text-align: center;
+	color: #000;
+}
+
+.body_wrapper .list .file_name{
+	line-height: 42px;
+	height: 42px;
+	border: 0;
+	border-bottom: 1px solid #8a8a8a;
+	font-size: 18px;
+}
+
+
+.body_wrapper div .content{
+	height: 115px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.body_wrapper .content p{
+	color: #000;
+	font-size: 13px;
+	text-indent: 13px;
+}
+
+.cage_op{
+	margin-top: 4px;
+	width: 100%;
+	
+}
+.cage_op a{
+	height: 25px;
+	width: 25px;
+}
+
+.cage_op img{
+	width: 21px;
+	height: 21px;
+}
+
+
+/* 新增书签和修改书签 */
+.body_wrapper .title{
+	display: inline-block;
+	font-size: 22px;
+	line-height: 22px;
+	color: #000;
+	height: 30px;
+	margin-bottom: 20px;
+	margin-left: 150px;
+}
+
+.req{
+	margin-left: 20px;
+}
+
+.req label{
+	display: block;
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.req ul{
+	margin-left: 150px;
+}
+.req li{
+	list-style: none;
+	margin-bottom: 25px;
+}
+
+.req li span{
+	font-size: 10px;
+	color: #707070;
+}
+
+.req .bm_input{
+	height: 30px;
+	width: 500px;
+	border-radius: 5px;
+	border: 1px solid #000;
+	outline: none;
+	display: block;
+}
+
+.req .bm_text{
+	height: 200px;
+	width: 500px;
+	border-radius: 5px;
+	border: 1px solid #000;
+	outline: none;
+}
+
+
+.sub_on input{
+	width: 80px;
+    height: 40px;
+    border: 1px solid #000;
+    background: #eee;
+    margin-right: 300px;
+    border-radius: 5px;
+    color: #000;
+}
+
+
+.sub_off input{
+	width: 80px;
+    height: 40px;
+    border: 1px solid #000;
+    background: #eee;
+    border-radius: 5px;
+    color: #000;
+}
+
+
+/* 分类新增和修改 */
+.hed{
+	width: 100px;
+	height: 45px;
+	margin-bottom: 20px;
+	margin-left: 150px;
+	position: relative;
+}
+.hed img{
+	width: 45px;
+	height: 45px;
+}
+
+.hed label{
+	height: 30px;
+	font-size: 24px;
+	line-height: 24px;
+	position: absolute;
+	bottom: 4px;
+	left: 50px;
+}
+
+
+.errmsg{
+	color: red;
+}
+
+/*标签*/
+.body_wrapper .left{
+	padding: 10px;
+	width: 600px;
+	height: 600px;
+	border:1px solid #000;
+	margin-right: 100px;
+}
+
+
+
+.body_wrapper .left .tag{
+	width: 90px;
+	height: 30px;
+	border: 1px solid #000;
+	margin-right: 40px;
+	margin-bottom: 10px;
+}
+
+.body_wrapper .left .tag .shanchu{
+	width: 20px;
+	height: 30px;
+	margin-top: 10px;
+	align-self: center;
+}
+
+.body_wrapper .left .tag input{
+	border:none;
+	width: 70px;
+	height: 30px;
+	text-align: center;
+	outline: none;	/*去掉点击时外层边框*/
+}
+
+.body_wrapper .right{
+	width: 285px;
+	height: 185px;
+	border:1px solid #000;
+	padding: 15px;
+}
+
+.body_wrapper .right label{
+	display: block;
+}
+
+.body_wrapper .right input{
+	display: block;
+	margin-top: 10px;
+	width: 250px;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid #7e7e7e;
+}
+
+.body_wrapper .right .sub{
+	width: 50px;
+	height: 20px;
+	background: none;
+	border: 1px solid #7e7e7e;
+}
