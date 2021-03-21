@@ -45,3 +45,9 @@ python manage.py runserver
 
 
 
+
+
+## 效果图
+
+![1](/home/jarvis/Desktop/bookmark_master/书签项目V2/效果图/1.png)
+
